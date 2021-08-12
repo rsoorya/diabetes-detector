@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% block body %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/assets/css/datepicker.css">
+    <link rel="stylesheet" href="static/assets/css/style.css">
+  </head>
+ {% block title %}
+ <title>Detect</title>
+ {% endblock title %}
+    <body>
+    <form action="/" method="POST">
+      <div class="inner-layer">
+          <div class="container">
+            <div class="row no-margin">
+                <div class="col-sm-7">
+                    <div class="content">
+                        <h2>Diabetes is a silent Killer.!</h1>
+                        <p>Get yourself tested for Diabetes today</p>
+                        <h3>For Help Call : +189-123-453</h3>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="form-data">
+                        <div class="form-head">
+                            <h5 style="text-align:center">Provide details listed below</h5>
+                        </div>
+                        <div class="form-body">
+                            <div class="row form-row">
+                              <input type="number" placeholder="Glucose(mg/dL)"  name="glucose" id="glucose" min="1" class="form-control" required>
+                            </div>
+                      
+                            
+
+                             <div class="row form-row">
+                                <div class="col-sm-6">
+                                   <input type="number" placeholder="Blood Pressure(mm Hg)" name="bp" id="bp" min="1" class="form-control" required>
+                                </div>
+                                <div class="col-sm-6">
+                                   <input type="number" placeholder="Insulin(mu U/ml)" name="insulin" id="insulin" min="1" class="form-control" required>
+                                </div>
+                            </div>
+                             <div class="row form-row">
+                                <div class="col-sm-6">
+                                   <input type="number" step=0.1 placeholder="BMI(kg/m²)" name="bmi" id="bmi" min="8.1" class="form-control" required>
+                                </div>
+                                <div class="col-sm-6">
+                                   <input type="number" placeholder="Age" name="age" id="age" class="form-control" min="1" required>
+                                </div>
+                            </div>
+
+                             <div class="row form-row">
+                               <button type="submit" class="btn btn-success btn-appointment" >
+                                 Check
+                               </button>
+                               
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      </form>
+      
+    </body>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="static/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="static/assets/js/popper.min.js"></script>
+    <script src="static/assets/js/bootstrap.min.js"></script>
+    <script src="static/assets/js/bootstrap-datepicker.js"></script>
+
+    <script>
+      $(document).ready(function(){
+          $("#dat").datepicker();
+      })
+    </script>
+    
+  </body>
+</html>
+{% endblock body %}

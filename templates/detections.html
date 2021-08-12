@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Latest Detections</title>
+{% endblock  %}
+
+{% block body %}
+
+    <h3 style="padding-left:20px;margin-top:50px;font-family:cursive">Recent Diabetic Detections</h3>
+
+<table style="margin-top:50px;" class="table table-bordered text-center table-striped table-light" id="tble">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col" >SNo.</th>
+      <th scope="col" >Glucose(mg/dL)</th>
+      <th scope="col" >Blood Pressure(mm Hg)</th>
+      <th scope="col" >Insulin(mu U/ml)</th>
+      <th scope="col" >BMI</th>
+      <th scope="col" >Age</th>
+      <th scope="col" >Diabetic Probability</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+
+
+  {% for pi in p %}
+    <tr>
+      
+      <td>{{pi.sno}}</td>
+      <td>{{pi.glucose}}</td>
+      <td>{{pi.bp}}</td>
+      <td>{{pi.insulin}}</td>
+      <td>{{pi.bmi}}</td>
+      <td>{{pi.age}}</td>
+      <td>{{pi.prob}}</td>
+      
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+
+</body>
+<br><br><br>
+<footer class="container-fluid bg-dark text-center text-white " >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  <div class="container p-2 pb-3">
+    
+   <section class="mb-1">
+     
+
+      
+      <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/sooryaramarao18" role="button"
+        ><i class="fa fa-twitter"></i
+      ></a>
+
+      
+      
+
+      
+      <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/r-soorya-0586681b2/" role="button"
+        ><i class="fa fa-linkedin"></i
+      ></a>
+
+      
+      <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/rsoorya" role="button"><i class="fa fa-github"></i></a>
+    </section>
+    
+  </div>
+  
+
+            <ul class="list-inline">
+                <li class="list-inline-item">Designed & Developed by <a style="text-decoration:none; color: white;text-align:center;font-family:cursive"
+                href="https://www.linkedin.com/in/r-soorya-0586681b2/">R Soorya</a></li>
+                 
+            </ul>  
+            
+    <br>
+
+  
+</footer>
+
+{% endblock body %}
